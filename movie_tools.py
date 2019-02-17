@@ -1,6 +1,3 @@
-# It is also possible that you will choose to define additional function/s in movies_tools.py and invoke them in the Flask code, but it is not necessary to do so. You can make your own design decisions here.
-#
-# We also suggest that, as you work, you have, beneath an if __name__ == "__main__": statement, code that opens up the clean movies data file and uses its contents to test out some instances of this class -- in order to ensure it works as you want it to. It's more annoying to debug inside Flask than it is to debug code outside Flask first, so read what your goals are, make sure your class works, and THEN integrate it into the app!
 
 class Movie():
     def __init__(self, movie_info_list):
