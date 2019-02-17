@@ -27,5 +27,5 @@ class Movie():
     def __repr__(self):
         return '{}'.format(self.title)
 
-    def returnIMDBRatingString(self):
+    def getIMDBRatingString(self):
         return '{} | {}'.format(self.title, self.imdb_rating)
