@@ -1,4 +1,6 @@
+from datetime import datetime, timedelta
 
+# define a class Movie that takes as input a list of information about a movie from movies_clean.csv or similar format
 class Movie():
     def __init__(self, movie_info_list):
         self.title = movie_info_list[0]
@@ -6,9 +8,15 @@ class Movie():
         self.worldwide_gross = movie_info_list[2]
         self.us_dvd_sales = movie_info_list[3]
         self.production_budget = movie_info_list[4]
-        self.release_date = movie_info_list[5]
+        try:
+            self.release_date = datetime.strptime(movie_info_list[5],"%d-%b-%y")
+        except:
+            self.release_date = None
         self.mpaa_rating = movie_info_list[6]
-        self.run_time_min = movie_info_list[7]
+        try:
+            self.run_time_min = timedelta(minutes = int(movie_info_list[7]))
+        except:
+            self.run_time_min = None
         self.distributor = movie_info_list[8]
         self.source = movie_info_list[9]
         self.major_genre = movie_info_list[10]
